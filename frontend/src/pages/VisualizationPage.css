@@ -1,0 +1,189 @@
+.viz-page {
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #0a1628;
+}
+
+.viz-container {
+  display: flex;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.canvas-wrapper {
+  flex: 1;
+  position: relative;
+  height: 100%;
+}
+
+/* Controls overlaid on canvas */
+.controls-panel {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+  background: rgba(10, 22, 40, 0.7);
+  padding: 10px 20px;
+  border-radius: 30px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.viz-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.viz-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.viz-btn.active {
+  background: #5aa9df;
+  border-color: #5aa9df;
+}
+
+/* Info Panel */
+.info-panel {
+  width: 350px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 10;
+}
+
+.info-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.info-card h2 {
+  color: #16324f;
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-weight: 700;
+  border-bottom: 2px solid #f0f8ff;
+  padding-bottom: 12px;
+}
+
+.risk-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metric-label {
+  color: #6b8295;
+  font-weight: 500;
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #16324f;
+}
+
+.viz-badge {
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.badge-success { background-color: #22c55e; }
+.badge-warning { background-color: #eab308; }
+.badge-danger { background-color: #ef4444; }
+
+.viz-description {
+  color: #6b8295;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.info-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: #5aa9df;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #4893c5;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #16324f;
+  border: 2px solid #16324f;
+}
+
+.btn-outline:hover {
+  background-color: #f0f8ff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .viz-container {
+    flex-direction: column;
+  }
+  
+  .canvas-wrapper {
+    min-height: 50vh;
+  }
+  
+  .info-panel {
+    width: 100%;
+    padding: 20px;
+    background: #f8fbff;
+  }
+  
+  .info-card {
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    max-width: 500px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}

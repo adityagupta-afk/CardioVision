@@ -1,0 +1,50 @@
+.footer-container {
+  background-color: #f8fbfe;
+  border-top: 1px solid #e1ecf4;
+  padding: 40px 24px;
+  font-family: 'Inter', sans-serif;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-brand {
+  color: #16324f;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-brand .heart-icon {
+  margin-right: 8px;
+  font-size: 1rem;
+  color: #5aa9df;
+}
+
+.footer-disclaimer {
+  color: #6b8295;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: 0 0 16px 0;
+  font-weight: 500;
+  background-color: #f0f8ff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border-left: 3px solid #5aa9df;
+}
+
+.footer-copyright {
+  color: #8da4b8;
+  font-size: 0.85rem;
+}

@@ -1,0 +1,120 @@
+/* ============================================================
+   CardioVision — Global Styles
+   ============================================================ */
+
+:root {
+  /* Colors */
+  --cv-primary: #5aa9df;
+  --cv-primary-dark: #4a93c9;
+  --cv-primary-light: #8ec5eb;
+  --cv-navy: #16324f;
+  --cv-navy-light: #1e4060;
+  --cv-text: #16324f;
+  --cv-text-muted: #6b8295;
+  --cv-text-light: #94a3b8;
+  --cv-bg: #ffffff;
+  --cv-bg-alt: #f8fbff;
+  --cv-bg-accent: #f0f8ff;
+  --cv-border: #e2e8f0;
+  --cv-border-light: #f1f5f9;
+  --cv-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  --cv-shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.1);
+  --cv-radius: 16px;
+  --cv-radius-sm: 12px;
+  --cv-radius-xs: 8px;
+
+  /* Status colors */
+  --cv-success: #22c55e;
+  --cv-warning: #eab308;
+  --cv-danger: #ef4444;
+  --cv-orange: #f97316;
+
+  /* Font */
+  --cv-font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--cv-font);
+  background: var(--cv-bg);
+  color: var(--cv-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  text-align: left;
+  border: none;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--cv-primary);
+  text-decoration: none;
+}
+
+button {
+  font-family: var(--cv-font);
+  cursor: pointer;
+}
+
+input, select, textarea {
+  font-family: var(--cv-font);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cv-bg-alt);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cv-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cv-text-light);
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
